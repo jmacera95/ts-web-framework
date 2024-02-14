@@ -1,10 +1,9 @@
 import { User } from './models/User';
 
-const juliMacera = new User({ name: 'Julián', age: 28 });
+const user = new User({ id: 1 });
 
-console.log(juliMacera.get('name'));
-console.log(juliMacera.get('age'));
+user.fetch();
 
-juliMacera.set({ age: 29 });
-
-console.log(juliMacera.get('age'));
+setTimeout(() => {
+  console.log(user);
+}, 4000);
