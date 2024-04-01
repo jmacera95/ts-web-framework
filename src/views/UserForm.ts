@@ -23,9 +23,13 @@ export class UserForm {
   };
 
   onUpdateNameClick = (): void => {
-    const name = this.parent.querySelector('input')?.value;
+    const input = this.parent.querySelector('input');
 
-    this.model.set({ name });
+    if (input) {
+      const name = input.value;
+
+      this.model.set({ name });
+    }
   };
 
   template(): string {
